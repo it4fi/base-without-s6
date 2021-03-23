@@ -1,3 +1,8 @@
+# See also:
+#
+# https://linuxhint.com/install_configure_docker_ubuntu/
+# https://phoenixnap.com/kb/install-docker-compose-on-ubuntu-20-04
+
 PLATFORM=local
 TAG=base:latest
 USER=test_user2
