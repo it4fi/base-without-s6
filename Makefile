@@ -21,6 +21,5 @@ test: build
 	@sudo -E docker run -it base bash
 
 build:
-	@echo "- CURRENT_UID ${CURRENT_UID}"
 	@sudo -E docker build --build-arg CURRENT_UID=${CURRENT_UID} \
 		. --platform ${PLATFORM} --tag ${TAG}
