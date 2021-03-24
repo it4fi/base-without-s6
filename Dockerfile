@@ -56,8 +56,9 @@ RUN apt-get-install-min language-pack-en        && \
     update-locale LANG=$LANG LC_CTYPE=$LC_CTYPE
 
 # Add test user - a sudoer. {{{1
+ARG CURRENT_UID
 ARG USERNAME=test_user
-ARG USER_UID=1000
+ARG USER_UID=${CURRENT_UID}
 ARG USER_GID=$USER_UID
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \

@@ -3,7 +3,7 @@
 
 # Remove /root/.bashrc and then, having created a user, make sure the user's .bashrc
 # also gets removed
-rm -f /root/.bashrc
+[ -e /root/.bashrc ] && rm /root/.bashrc
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
