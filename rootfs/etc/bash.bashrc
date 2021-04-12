@@ -40,9 +40,9 @@ txtgrn='\e[0;32m' # Green
 smiley() {
     ret_val=$?
     if [ "$ret_val" = "0" ]; then
-        echo -e "${txtgrn}:)"
+        echo -e '👍🏽'
     else
-        echo -e "${txtred}:( (`printf '0x%02x\n' $ret_val`)"
+        echo -e "👎🏽 (`printf '0x%02x\n' $ret_val`)"
     fi
 }
 

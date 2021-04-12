@@ -67,3 +67,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && apt-get update && apt-get -y install make sudo \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
+
+# Install common compilation tools {{{1
+RUN apt-get update && apt-get -y install git build-essential pkg-config \
+    autoconf automake libtool \
+    bison flex libpq-dev parallel libunwind-dev
