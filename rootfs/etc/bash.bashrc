@@ -44,6 +44,9 @@ smiley() {
     else
         echo -e "👎🏽 (`printf '0x%02x\n' $ret_val`)"
     fi
+    # See also:
+    # https://getemoji.com/
+    # https://emojipedia.org/
 }
 
 if [[ ${EUID} == 0 ]] ; then
